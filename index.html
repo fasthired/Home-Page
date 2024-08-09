@@ -1,21 +1,4 @@
 <!DOCTYPE html>
-<!--
-Created using JS Bin
-http://jsbin.com
-
-Copyright (c) 2024 by fasthired (http://jsbin.com/fenicaj/1/edit)
-
-Released under the MIT license: http://jsbin.mit-license.org
--->
-<meta name="robots" content="noindex">
-<!--
-Created using JS Bin
-http://jsbin.com
-
-Copyright (c) 2024 by fasthired (http://jsbin.com/yuyaqiw/1/edit)
-
-Released under the MIT license: http://jsbin.mit-license.org
--->
 <meta name="robots" content="noindex">
 <html lang="en">
 <head>
@@ -36,6 +19,17 @@ Released under the MIT license: http://jsbin.mit-license.org
             color: #333;
         }
 
+		        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .content {
+            padding: 20px;
+        }
+		
         .container {
             text-align: center;
             background: #ffffff;
@@ -136,8 +130,8 @@ Released under the MIT license: http://jsbin.mit-license.org
             text-align: center;
             padding: 20px;
             font-size: 14px;
-            color: #6c757d;
-            background-color: #ffffff;
+            color: #ffffff; /* White text color for contrast */
+            background-color: #0d47a1; /* Dark Blue background */
             box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
             width: 100%;
             margin-top: 20px;
@@ -149,20 +143,17 @@ Released under the MIT license: http://jsbin.mit-license.org
 
         .footer .contact-info {
             margin-bottom: 10px;
-            color: #0d47a1; /* Dark Blue */
         }
 
         .footer .terms {
             font-style: italic;
-            color: #ff9800; /* Bright Orange */
         }
 
         .footer .copyright {
-            margin-top: 10px;
-            color: #333;
+            color: #ffffff; /* White text color for contrast */
         }
 
-        .popup {
+       .popup {
             position: fixed;
             top: 0;
             left: 0;
@@ -176,6 +167,7 @@ Released under the MIT license: http://jsbin.mit-license.org
             visibility: hidden;
             opacity: 0;
             transition: opacity 0.5s, visibility 0.5s;
+		    overflow: hidden;
         }
 
         .popup.active {
@@ -310,7 +302,181 @@ Released under the MIT license: http://jsbin.mit-license.org
         .navigation button:hover {
             background: #ff9800; /* Bright Orange */
         }
-    </style>
+      
+       .profile-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            padding: 2em 1em;
+            justify-content: center;
+        }
+
+        .profile-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5em;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-card img {
+            width: 100%;
+            height: 250px; /* Portrait style */
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1em;
+        }
+
+        .profile-card h3 {
+            margin: 0.5em 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .profile-card p {
+            margin: 0.5em 0;
+            color: #666;
+        }
+
+        .profile-card a.button {
+            background-color: #ff6600;
+            border: none;
+            color: white;
+            padding: 0.75em 1.5em;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1em;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .profile-card a.button:hover {
+            background-color: #e55a00;
+        }
+
+        .skills-section {
+            text-align: left;
+            margin-top: 1em;
+        }
+
+        .skills-section h4 {
+            margin: 1em 0 0.5em 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .skill {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75em;
+        }
+
+        .skill i {
+            margin-right: 0.5em;
+            color: #ff6600;
+        }
+
+        .skill .bar {
+            flex-grow: 1;
+            height: 5px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            margin-left: 0.5em;
+            position: relative;
+        }
+
+        .skill .bar span {
+            display: block;
+            height: 100%;
+            background-color: #ff6600;
+            border-radius: 5px;
+        }
+
+        .relocate {
+            display: flex;
+            align-items: center;
+            margin-top: 1em;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .relocate i {
+            margin-right: 0.5em;
+            color: #ff6600;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            margin: 2em 0;
+        }
+
+        .pagination button {
+            padding: 0.5em 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #fff;
+            color: #333;
+            font-size: 1em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .pagination button:hover {
+            background-color: #f0f0f0;
+            color: #ff6600;
+        }
+		        .map-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .map-container h1 {
+            font-size: 2em;
+            margin-bottom: 1px;
+            color: #333;
+        }
+
+        .map-container {
+    		text-align: center;
+    		padding: 20px;
+    		background-color: #fff;
+    		width: 100%; /* Ensure the container takes full width */
+			max-width: 1000px; /* Optional: set a max-width for larger screens */
+    		margin: 0 auto;
+        }
+
+        .map-responsive {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%;
+			height: : 0;
+			margin-bottom: 20px
+            /* 16:9 aspect ratio */
+        }
+
+        .map-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+   </style>
 <style id="jsbin-css">
 body {
     font-family: Arial, sans-serif;
@@ -364,13 +530,13 @@ nav ul li a:hover {
 }
 
 main {
-    padding: 20px;
+    padding: 2px;
     max-width: 800px;
     margin: auto;
 }
 
 main section {
-    margin-bottom: 40px;
+    margin-bottom: 1px;
 }
 
 main h2 {
@@ -378,30 +544,19 @@ main h2 {
     border-bottom: 2px solid #007bff;
     padding-bottom: 5px;
 }
-
-footer {
-    background-color: #007bff;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-</style>
+  </style>
 </head>
 <body>
     <!-- Popup Section -->
     <div id="popup" class="popup">
         <div class="popup-content">
-            <span class="close-btn" id="close-popup">&times;</span>
+            	<span class="close-btn" id="close-popup">&times;</span>
             <h2>CV/RESUME REVIEW</h2>
             <p>Enhance your career prospects with a professionally reviewed CV Report. Get personalized feedback to make your resume shine!</p>
-            <a href="https://bit.ly/3y9hoN5" target="_blank">Request Review Service Instantly</a>
+            <a href="https://wa.me/233546460945" target="_blank">Request Service Via WhatsApp</a>
         </div>
     </div>
-
+  
     <!-- Main Content -->
     <div class="container">
         <div class="profile">
@@ -415,11 +570,13 @@ footer {
             <li><a href="https://web.facebook.com/fasthiredandtravels?_rdc=1&_rdr" target="_blank" class="fab fa-facebook-f"></a></li>
             <li><a href="https://x.com/fasthired_" target="_blank" class="fab fa-twitter"></a></li>
             <li><a href="https://www.instagram.com/fasthiredandtravels_/" target="_blank" class="fab fa-instagram"></a></li>
-            <li><a href="https://www.linkedin.com/company/fast-hired-and-travels//" target="_blank" class="fab fa-linkedin-in"></a></li>
+            <li><a href="https://https://wa.me/233546460945//" target="_blank" class="fab fa-whatsapp"></a></li>
             <li><a href="https://https://www.youtube.com/@Fast-HiredAndTravels/?sub_confirmation=1" target="_blank" class="fab fa-youtube"></a></li>
             <li><a href="https://https://t.me/fasthiredandtravels" target="_blank" class="fab fa-telegram"></a></li>
             <li><a href="https://www.tiktok.com/@fashionably.hired" target="_blank" class="fab fa-tiktok"></a></li>
         </ul>
+		
+		<hr>
 
         <!-- Image Slider -->
         <div class="slider">
@@ -434,6 +591,8 @@ footer {
             </div>
         </div>
 
+		<hr> 
+		
         <!-- About Us Section -->
         <div class="about-section">
             <h2>About Us</h2>
@@ -488,16 +647,7 @@ footer {
                </div>
            </a>
        </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        <p class="contact-info">📞 Contact Us: +233 551999901 | +233 546460945</p>
-        <p class="location">📍 Location: Madina Zongo Junction</p>
-        <p class="email">✉️ Email: f.hiredandtravels@gmail.com</p>
-        <p class="terms">Learn Our Job Seeker <a href="https://drive.google.com/file/d/1Y8GYZmhBv1G7OiD3B5aRdB8i2899tW5p/view?usp=sharing">Terms And Conditions</a>.</p>
-        <p class="copyright">© 2024 Fast-Hired and Travels. All rights reserved.</p>
-    </div>
-
+    
     <script>
         // Show popup after 5 seconds
         setTimeout(function() {
@@ -536,5 +686,129 @@ footer {
         // Automatically change slides every 5 seconds
         setInterval(nextSlide, 5000);
     </script>
+     
+    <main>
+        <section class="hero">
+            <h2>Featured Monthly Subscribers</h2>
+            <p>Top Candidates | Great Soft And Hard Skills | To-Level Competency.</p>
+     </section>
+        <section class="profile-grid" id="profile-grid">
+            <!-- Profiles will be dynamically inserted here -->
+        </section>
+        <div class="pagination">
+            <button id="prev-button">Previous</button>
+            <button id="next-button">Next</button>
+      </div>
+
+</div>
+<script>
+    const profiles = [
+        { img: 'https://www.amoahmotorssparelimited.com/wp-content/uploads/2024/08/r343434343.png', name: 'Rukaya Abdulai', job: 'Customer Service Professional', cvLink: 'https://drive.google.com/file/d/1Dqrv2F6Fuoqlja7dmP7eQlkc8XvLPiwj/view', skills: { 'Hard Skills': [{ name: 'Office Suite', level: '90%' }, { name: 'CRM Software', level: '85%' }, { name: 'Social Media Savvy', level: '80%' }], 'Soft Skills': [{ name: 'Customer-Centric', level: '88%' }, { name: 'Team Player', level: '85%' }], 'Competencies': [{ name: 'Social Media Management', level: '90%' }, { name: 'Telemarketing', level: '82%' }] }, relocate: true },
+        { img: 'https://www.amoahmotorssparelimited.com/wp-content/uploads/2024/08/ewrwerwerw3w3.png', name: 'Nana Yaw B. Amoah', job: 'Accounting | HR | Client Service', cvLink: 'https://drive.google.com/file/d/1I3F8L3mbphvV53Oc_1fcx26QNU_E5FLq/view', skills: { 'Hard Skills': [{ name: 'Office suite', level: '90%' }, { name: 'Data Analysis', level: '95%' }, { name: 'Quality control', level: '92%' }], 'Soft Skills': [{ name: 'Communication', level: '96%' }, { name: 'Problem-Solving', level: '93%' }], 'Competencies': [{ name: 'Leadership', level: '91%' }, { name: 'Decision-Making', level: '94%' }] }, relocate: true },
+        { img: 'https://www.amoahmotorssparelimited.com/wp-content/uploads/2024/08/e434343.png', name: 'Cynthia Klu', job: 'Administrative Assistant', cvLink: 'https://drive.google.com/file/d/1I3F8L3mbphvV53Oc_1fcx26QNU_E5FLq/view', skills: { 'Hard Skills': [{ name: 'Office Suite', level: '95%' }, { name: 'Book Keeping', level: '85%' }, { name: 'Statistical Analysis', level: '80%' }], 'Soft Skills': [{ name: 'Critical Thinking', level: '98%' }, { name: 'Team Work', level: '99%' }], 'Competencies': [{ name: 'Result-Oriented', level: '99%' }, { name: 'Public Relations', level: '75%' }] }, relocate: true },
+        { img: 'https://www.amoahmotorssparelimited.com/wp-content/uploads/2024/08/werw3434.png', name: 'Mark  Mensah', job: 'Excavator Operator', cvLink: 'https://drive.google.com/file/d/1I3F8L3mbphvV53Oc_1fcx26QNU_E5FLq/view', skills: { 'Hard Skills': [{ name: 'Excavator Operation', level: '99%' }, { name: 'Equipment Maintenance ', level: '85%' }, { name: 'Excavation Techniques', level: '80%' }], 'Soft Skills': [{ name: 'Communication', level: '90%' }, { name: 'Problem-Solving', level: '88%' }], 'Competencies': [{ name: 'Safety Awareness', level: '90%' }, { name: 'Spatial Awareness', level: '82%' }] }, relocate: true },
+        { img: 'https://randomuser.me/api/portraits/men/5.jpg', name: 'Daniel Lee', job: 'Data Analyst', cvLink: 'https://drive.google.com/file/d/1I3F8L3mbphvV53Oc_1fcx26QNU_E5FLq/view', skills: { 'Hard Skills': [{ name: 'Python', level: '90%' }, { name: 'SQL', level: '85%' }, { name: 'Excel', level: '80%' }], 'Soft Skills': [{ name: 'Analytical Thinking', level: '88%' }, { name: 'Attention to Detail', level: '90%' }], 'Competencies': [{ name: 'Data Visualization', level: '87%' }, { name: 'Predictive Analytics', level: '82%' }] }, relocate: true }
+		
+    ];
+
+    const profilesPerPage = 2;
+    let currentPage = 1;
+
+    function renderProfiles(page) {
+        const startIndex = (page - 1) * profilesPerPage;
+        const endIndex = Math.min(startIndex + profilesPerPage, profiles.length);
+        const profileGrid = document.getElementById('profile-grid');
+
+        profileGrid.innerHTML = '';
+
+        for (let i = startIndex; i < endIndex; i++) {
+            const profile = profiles[i];
+            const profileCard = document.createElement('div');
+            profileCard.className = 'profile-card';
+
+            profileCard.innerHTML = `
+                <img src="${profile.img}" alt="${profile.name}">
+                <h3>${profile.name}</h3>
+                <p>${profile.job}</p>
+                <a href="${profile.cvLink}" class="button">View Resume</a>
+                <div class="skills-section">
+                    <h4>Hard Skills</h4>
+                    ${profile.skills['Hard Skills'].map(skill => `
+                        <div class="skill">
+                            <i class="fas fa-tools"></i>
+                            <span>${skill.name}</span>
+                            <div class="bar"><span style="width: ${skill.level};"></span></div>
+                            <span>${skill.level}</span>
+                        </div>
+                    `).join('')}
+                    <h4>Soft Skills</h4>
+                    ${profile.skills['Soft Skills'].map(skill => `
+                        <div class="skill">
+                            <i class="fas fa-user-tie"></i>
+                            <span>${skill.name}</span>
+                            <div class="bar"><span style="width: ${skill.level};"></span></div>
+                            <span>${skill.level}</span>
+                        </div>
+                    `).join('')}
+                    <h4>Competencies</h4>
+                    ${profile.skills['Competencies'].map(skill => `
+                        <div class="skill">
+                            <i class="fas fa-briefcase"></i>
+                            <span>${skill.name}</span>
+                            <div class="bar"><span style="width: ${skill.level};"></span></div>
+                            <span>${skill.level}</span>
+                        </div>
+                    `).join('')}
+                    <div class="relocate">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Willing to Relocate: ${profile.relocate ? 'Yes' : 'No'}</span>
+                    </div>
+                </div>
+            `;
+
+            profileGrid.appendChild(profileCard);
+        }
+    }
+
+    function updatePagination() {
+        document.getElementById('prev-button').disabled = currentPage === 1;
+        document.getElementById('next-button').disabled = currentPage === Math.ceil(profiles.length / profilesPerPage);
+    }
+
+    document.getElementById('prev-button').addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderProfiles(currentPage);
+            updatePagination();
+        }
+    });
+
+    document.getElementById('next-button').addEventListener('click', () => {
+        if (currentPage < Math.ceil(profiles.length / profilesPerPage)) {
+            currentPage++;
+            renderProfiles(currentPage);
+            updatePagination();
+        }
+    });
+
+    // Initial render and pagination setup
+    renderProfiles(currentPage);
+    updatePagination();
+</script>
+
+	 <div class="map-container">
+        <h1>Visit Our Location</h1>
+     <hr>
+		 
+        <div class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.2309686792137!2d-0.17713672501392647!3d5.679717894301909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9d1ff7bef061%3A0x2dcb252511b1239f!2sFast%20-%20Hired%20And%20Travels!5e0!3m2!1sen!2sgh!4v1723050795410!5m2!1sen!2sgh" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+	
+    <div class="footer">
+        <p class="contact-info">Contact us: Fast-Hired And Travels, Zongo Junction, Accra: f.hiredandtravels@gmail.com | Phone: +233 546 460 945</p>
+        <p class="terms">Terms of Service | Privacy Policy</p>
+        <p class="copyright">&copy; 2024 Fast-Hired & Travels. All rights reserved.</p>
+    </div>
 </body>
 </html>
